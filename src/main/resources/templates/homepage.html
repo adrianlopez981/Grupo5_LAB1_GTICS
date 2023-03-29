@@ -1,10 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>/homepage</title>
+</head>
+<body >
+<div class="container">
+    <form action="/homepage" method="post">
+        <div class="row mt-4">
+
+            <div class="col-1 mt-5">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" >Mi billetera</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-1 mt-5">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" >Cambio</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-5 mt-5">
+                <input name="divisas" class="form-control me-2 " type="search" placeholder="Buscar divisas" aria-label="Search">
+            </div>
+            <div class="col-2 mt-5">
+                <button type="submit" class="btn btn-success">Buscar</button>
+                <button type="submit" class="btn btn-dark">Cerrar Sesión</button>
+            </div>
+
+        </div>
+    </form>
+    <div class="card text-center mt-5 border-white">
+        <div class="card-body">
+            <h5 class="card-title">La forma más popular del mundo para comprar, vender e intercambiar criptomonedas </h5>
+            <img th:src="@{/static/monedas.png}" height="300" alt="Monedas"/>
+        </div>
+    </div>
+
+    <div class="card text-center mt-5 border-white">
+        <div class="card-body">
+            <h5 class="card-title">Binance Coin (BNB) </h5>
+            <h6>BNB se lanzó a través de una oferta inicial de monedas en 2017, 11 días antes de que el exchange de criptomonedas Binance se pusiera en marcha. Originalmente se emitió como un token ERC-20 que se ejecutaba en la red de Ethereum, con un suministro total limitado a 200 millones de monedas y 100 millones de BNB ofrecidos en la ICO. El precio actual es de $450 cada uno </h6>
+            <h6 style="color:orange;">BNB tuvo una bajada del 60% en las ultimas 24 horas!</h6>
+        </div>
+        <div class="col-2 mt-5">
+            <button class="btn btn-success">Comprar</button>
+            <button class="btn btn-danger">Vender</button>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Cardano (ADA) </h5>
+            <h6>Cardano es una plataforma de blockchain de prueba de participación cuyo objetivo es permitir que los usuarios que sean "pioneros, innovadores y visionarios" traigan consigo un cambio global positivo a la red. Este proyecto de código abierto también pretende “redistribuir el poder de las estructuras contables entre los individuos marginados". El precio actual es de $2.52 cada uno</h6>
+            <h6 style="color:green;">ADA tuvo una subida del 30% en las ultimas 24 horas!</h6>
+        </div>
+        <div class="col-2 mt-5">
+            <button class="btn btn-success">Comprar</button>
+            <button class="btn btn-danger">Vender</button>
+        </div>
+    </div>
+
+</div>
 </body>
+
 </html>
